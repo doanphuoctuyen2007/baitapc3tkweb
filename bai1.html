@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Trang giới thiệu cá nhân của sinh viên">
+
+    <meta name="author"
+        content="Đoàn Phước Tuyên">
+
+    <meta name="keywords"
+        content="sinh viên, CNTT, giới thiệu">
+
+    <title>Giới thiệu bản thân – Đoàn Phước Tuyên</title>
+
+    <style>
+        /* Nền toàn trang */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf7fa;
+            color: #333;
+        }
+
+        /* Phần đầu trang */
+        header {
+            width: 80%;
+            margin: 20px auto 0;
+            padding: 25px;
+            box-sizing: border-box;
+
+            background: linear-gradient(
+                120deg,
+                #1787a5,
+                #45c6c8,
+                #f4a261
+            );
+
+            color: white;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 3px 8px #aaa;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header h2 {
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        /* Thanh menu */
+        nav {
+            width: 80%;
+            margin: 0 auto;
+            padding: 12px;
+            box-sizing: border-box;
+
+            background: white;
+            text-align: left;
+
+            box-shadow: 0 3px 8px #aaa;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+
+            background: #e8d7b9;
+            padding: 7px 15px;
+            margin-right: 5px;
+            border-radius: 15px;
+        }
+
+        nav a:hover {
+            background: #f4a261;
+            color: white;
+        }
+
+        /* Nội dung */
+        main {
+            width: 80%;
+            margin: 25px auto;
+
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            box-sizing: border-box;
+
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #bbb;
+        }
+
+        #gioithieu {
+            width: 45%;
+        }
+
+        #kynang {
+            width: 30%;
+        }
+
+        #lienhe {
+            width: 20%;
+        }
+
+        section h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 12px 0;
+        }
+
+        address {
+            line-height: 2;
+            font-style: normal;
+        }
+
+        /* Chân trang */
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+
+            background: #9bd3f5;
+            text-align: center;
+
+            color: #333;
+        }
+
+        /* Khi màn hình nhỏ */
+        @media (max-width: 768px) {
+            header,
+            nav,
+            main {
+                width: 95%;
+            }
+
+            #gioithieu,
+            #kynang,
+            #lienhe {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ĐOÀN PHƯỚC TUYÊN</h1>
+        <h2>Sinh viên CNTT - Lớp CNTT-K66</h2>
+    </header>
+
+    <nav>
+        <a href="#gioithieu">GIỚI THIỆU</a>
+        <a href="#kynang">KỸ NĂNG</a>
+        <a href="#lienhe">LIÊN HỆ</a>
+    </nav>
+
+    <main>
+
+        <section id="gioithieu">
+            <h2>Giới thiệu</h2>
+
+            <p>
+                Tôi là sinh viên năm 2 ngành Công nghệ Thông tin.
+                Tôi yêu thích lập trình và đang tìm hiểu về lĩnh vực
+                phát triển phần mềm và lập trình game.
+            </p>
+
+            <p>
+                Mục tiêu của tôi là nâng cao kiến thức lập trình,
+                rèn luyện kỹ năng thực hành và trở thành một lập trình
+                viên game trong tương lai.
+            </p>
+        </section>
+
+        <section id="kynang">
+            <h2>Kỹ năng</h2>
+
+            <ul>
+                <li>Thiết kế Web (HTML5, CSS3, JS)</li>
+                <li>Lập trình Backend cơ bản</li>
+                <li>Sử dụng Git & GitHub</li>
+                <li>Thiết kế Responsive</li>
+            </ul>
+        </section>
+
+        <section id="lienhe">
+            <h2>Liên hệ</h2>
+
+            <address>
+                📧 Email: tuyendoan955@gmail.com
+                <br>
+                📞 0943-962-759
+            </address>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 – ĐOÀN PHƯỚC TUYÊN. All rights reserved.
+    </footer>
+
+</body>
+</html>

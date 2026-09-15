@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đặt vé máy bay VietAir</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eaf6ff;
+            color: #333;
+        }
+
+        main {
+            width: 650px;
+            margin: 30px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px #aaa;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 15px 0 10px;
+        }
+
+        /* FORM */
+
+        form {
+            width: 100%;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .form-row > label {
+            width: 180px;
+            font-size: 15px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        select {
+            flex: 1;
+            height: 32px;
+            padding: 5px 8px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* PHẦN KẾT QUẢ */
+
+        .result {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #eef8ff;
+            border-radius: 5px;
+        }
+
+        .result label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        output {
+            font-size: 17px;
+            font-weight: bold;
+            color: #d35400;
+            margin-left: 5px;
+        }
+
+        /* BẢO MẬT */
+
+        .security {
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .security p {
+            font-size: 13px;
+            margin: 5px 0 10px;
+        }
+
+        /* BUTTON */
+
+        button[type="submit"] {
+            width: 100%;
+            margin-top: 15px;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            background-color: #f47b20;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #df6810;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <main>
+
+        <section>
+
+            <h1>Đặt vé máy bay VietAir - Kết quả Bài tập</h1>
+
+
+            <!-- ================================================= -->
+            <!-- FORM -->
+            <!-- ================================================= -->
+
+            <form
+                action="xu_ly_ve.php"
+                method="POST">
+
+
+                <!-- ================================================= -->
+                <!-- PHẦN 1: THÔNG TIN CHUYẾN BAY -->
+                <!-- ================================================= -->
+
+                <h2>1. Thông tin chuyến bay</h2>
+
+
+                <!-- Điểm đi -->
+
+                <div class="form-row">
+
+                    <label for="diem_di">
+                        Điểm đi:
+                    </label>
+
+                    <input
+                        type="text"
+                        name="diem_di"
+                        id="diem_di"
+                        list="danhsach_thanh_pho"
+                        placeholder="Nhập điểm đi">
+
+
+                    <datalist id="danhsach_thanh_pho">
+
+                        <option value="Hà Nội – HAN">
+
+                        <option value="TP. Hồ Chí Minh – SGN">
+
+                        <option value="Đà Nẵng – DAD">
+
+                        <option value="Nha Trang – CXR">
+
+                        <option value="Phú Quốc – PQC">
+
+                        <option value="Hải Phòng – HPH">
+
+                        <option value="Cần Thơ – VCA">
+
+                    </datalist>
+
+                </div>
+
+
+                <!-- Điểm đến -->
+
+                <div class="form-row">
+
+                    <label for="diem_den">
+                        Điểm đến:
+                    </label>
+
+                    <input
+                        type="text"
+                        name="diem_den"
+                        id="diem_den"
+                        list="danhsach_thanh_pho"
+                        placeholder="Nhập điểm đến">
+
+                </div>
+
+
+                <!-- Ngày đi -->
+
+                <div class="form-row">
+
+                    <label for="ngay_di">
+                        Ngày đi:
+                    </label>
+
+                    <input
+                        type="date"
+                        name="ngay_di"
+                        id="ngay_di"
+                        required>
+
+                </div>
+
+
+                <!-- Ngày về -->
+
+                <div class="form-row">
+
+                    <label for="ngay_ve">
+                        Ngày về:
+                    </label>
+
+                    <input
+                        type="date"
+                        name="ngay_ve"
+                        id="ngay_ve">
+
+                </div>
+
+
+                <!-- Hạng ghế -->
+
+                <div class="form-row">
+
+                    <label for="hang_ghe">
+                        Hạng ghế:
+                    </label>
+
+                    <select
+                        name="hang_ghe"
+                        id="hang_ghe">
+
+                        <optgroup label="Phổ thông">
+
+                            <option value="eco_basic">
+                                Phổ thông cơ bản – 1.200.000đ
+                            </option>
+
+                            <option value="eco_flex">
+                                Phổ thông linh hoạt – 1.800.000đ
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Thương gia">
+
+                            <option value="biz">
+                                Thương gia – 4.500.000đ
+                            </option>
+
+                        </optgroup>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- PHẦN 2: THÔNG TIN HÀNH KHÁCH -->
+                <!-- ================================================= -->
+
+                <h2>2. Thông tin hành khách</h2>
+
+
+                <!-- Số hành khách người lớn -->
+
+                <div class="form-row">
+
+                    <label for="nguoi_lon">
+                        Số hành khách người lớn:
+                    </label>
+
+                    <input
+                        type="number"
+                        name="nguoi_lon"
+                        id="nguoi_lon"
+                        min="1"
+                        max="9"
+                        value="1">
+
+                </div>
+
+
+                <!-- Số trẻ em -->
+
+                <div class="form-row">
+
+                    <label for="tre_em">
+                        Số trẻ em:
+                    </label>
+
+                    <input
+                        type="number"
+                        name="tre_em"
+                        id="tre_em"
+                        min="0"
+                        max="9"
+                        value="0">
+
+                </div>
+
+
+                <!-- Mã giảm giá -->
+
+                <div class="form-row">
+
+                    <label for="ma_giam">
+                        Mã giảm giá:
+                    </label>
+
+                    <input
+                        type="text"
+                        name="ma_giam"
+                        id="ma_giam"
+                        placeholder="Nhập mã nếu có"
+                        list="ma_uu_dai">
+
+
+                    <datalist id="ma_uu_dai">
+
+                        <option value="SUMMER20">
+
+                        <option value="NEWMEMBER">
+
+                        <option value="HOLIDAY50">
+
+                    </datalist>
+
+                </div>
+
+
+
+                <!-- ================================================= -->
+                <!-- PHẦN 3: KẾT QUẢ -->
+                <!-- ================================================= -->
+
+                <div class="result">
+
+                    <label for="tong_tien">
+                        Tổng tiền ước tính:
+                    </label>
+
+                    <output
+                        name="tong_tien"
+                        id="tong_tien"
+                        for="hang_ghe nguoi_lon tre_em">
+
+                        3.600.000 VNĐ
+
+                    </output>
+
+                </div>
+
+
+                <!-- ================================================= -->
+                <!-- PHẦN 4: BẢO MẬT -->
+                <!-- ================================================= -->
+
+                <div class="security">
+
+                    <h2>4. Bảo mật giao dịch</h2>
+
+                    <p>
+                        Hệ thống sẽ tạo mã khóa bảo mật cho
+                        phiên giao dịch của bạn.
+                    </p>
+
+
+                    <!-- Keygen -->
+
+                    <keygen
+                        name="security_key"
+                        keytype="rsa">
+
+                </div>
+
+
+                <!-- ================================================= -->
+                <!-- SUBMIT -->
+                <!-- ================================================= -->
+
+                <button type="submit">
+                    ✈ Tìm chuyến bay
+                </button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>

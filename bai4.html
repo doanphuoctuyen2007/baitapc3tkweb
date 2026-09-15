@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MelodyVN Online</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("thumbnail.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #222;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            background-color: #d9eeee;
+            text-align: center;
+            padding: 18px;
+            border-bottom: 1px solid #aaa;
+        }
+
+        hgroup h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        hgroup h2 {
+            margin: 5px 0 0;
+            font-size: 17px;
+            font-weight: normal;
+            color: #666;
+        }
+
+
+        /* ================= MAIN ================= */
+
+        main {
+            width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.92);
+            padding: 20px 25px 80px;
+            min-height: 600px;
+
+            position: relative;
+        }
+
+
+        /* ================= VIDEO ================= */
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        section h2 {
+            font-size: 19px;
+            margin: 0 0 12px;
+        }
+
+        video {
+            width: 640px;
+            height: 360px;
+            display: block;
+            background-color: black;
+            border: 1px solid #999;
+        }
+
+        section p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+
+        /* ================= AUDIO ================= */
+
+        audio {
+            width: 640px;
+            margin: 8px 0 15px;
+        }
+
+        .audio-item {
+            margin-bottom: 15px;
+        }
+
+        .audio-item p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+
+        /* ================= ASIDE ================= */
+
+        aside {
+            position: absolute;
+            right: 25px;
+            top: 40px;
+
+            width: 190px;
+
+            background-color: white;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+
+            padding: 12px;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        aside h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+        }
+
+
+        /* ================= TABLE ================= */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th,
+        td {
+            border: 1px solid #aaa;
+            padding: 7px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #d9eeee;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        body > footer {
+            background-color: #0b4c61;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <hgroup>
+
+            <h1>MelodyVN Online</h1>
+
+            <h2>Học nhạc mọi lúc mọi nơi</h2>
+
+        </hgroup>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ===== VIDEO BÀI HỌC ===== -->
+
+        <section>
+
+            <h2>Bài học: Hợp âm cơ bản Guitar</h2>
+
+
+            <video
+                width="640"
+                height="360"
+                controls
+                poster="thumbnail.jpg"
+                preload="metadata">
+
+                <!-- Video MP4 -->
+                <source
+                    src="audio\bai_hoc_guitar.mp4"
+                    type="video/mp4">
+
+                <!-- Video WEBM -->
+                <source
+                    src="bai_hoc_guitar.webm"
+                    type="video/webm">
+
+                <!-- Fallback -->
+                <p>
+                    Trình duyệt của bạn không hỗ trợ video.
+                </p>
+
+            </video>
+
+
+            <p>
+                Học các hợp âm guitar cơ bản và thực hành
+                theo bài học để nâng cao kỹ năng chơi đàn.
+            </p>
+
+        </section>
+
+
+
+        <!-- ===== NGHE THỬ ===== -->
+
+        <section>
+
+            <h2>Nghe thử giai điệu mẫu</h2>
+
+
+            <!-- Bài 1 -->
+
+            <div class="audio-item">
+
+                <p>Canon in D – Piano</p>
+
+                <audio controls preload="none">
+
+                    <source
+                        src="canon_piano.mp3"
+                        type="audio/mpeg">
+
+                    <source
+                        src="canon_piano.ogg"
+                        type="audio/ogg">
+
+                    <p>
+                        Trình duyệt của bạn không hỗ trợ audio.
+                    </p>
+
+                </audio>
+
+            </div>
+
+
+
+            <!-- Bài 2 -->
+
+            <div class="audio-item">
+
+                <p>Für Elise – Piano</p>
+
+                <audio controls autoplay loop>
+
+                    <source
+                        src="canon_piano.mp3"
+                        type="audio/mpeg">
+
+                    <source
+                        src="canon_piano.ogg"
+                        type="audio/ogg">
+
+                    <p>
+                        Trình duyệt của bạn không hỗ trợ audio.
+                    </p>
+
+                </audio>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ASIDE ================= -->
+
+        <aside>
+
+            <h3>Lịch học tuần này</h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Ngày</th>
+                        <th>Buổi học</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+                        <td>Thứ Hai</td>
+                        <td>Guitar cơ bản</td>
+                    </tr>
+
+                    <tr>
+                        <td>Thứ Tư</td>
+                        <td>Piano nhập môn</td>
+                    </tr>
+
+                    <tr>
+                        <td>Thứ Sáu</td>
+                        <td>Hợp âm nâng cao</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </aside>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <address>
+            Trung tâm âm nhạc MelodyVN |
+            123 Đường Lý Tự Trọng, Quận 1 |
+            Email: info@melodyvn.com |
+            Hotline: 1900 6789
+        </address>
+
+    </footer>
+
+
+</body>
+
+</html>
